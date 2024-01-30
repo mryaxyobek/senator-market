@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+
+
+
+/* components  */
+@layer components {}
+
+
+
+
+
+
+
+
+/* base */
+@layer base {
+  body {
+    background: #fff;
+    font-family: sans-serif;
+  }
+}
+
+
+
+
+
+
+
+/* utilites */
+@layer utilities {
+  .container {
+    @apply max-w-7xl w-full mx-auto px-5;
+  }
+}

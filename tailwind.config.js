@@ -7,8 +7,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        blue: {
-          500: 'blue',
+        primary: {
+          black: '#040D12',
+          green: '#07AE6E',
+          gray: '#B1B1B1',
+          white: '#ffffff',
         },
       },
 
@@ -22,6 +25,22 @@ export default {
       // transfrom, z
       zIndex: {
         1640: '1640px',
+      },
+
+
+      backgroundOpacity: {
+        12: '0.12',
+      },
+
+      // font
+      fontSize: {
+        44: '44px',
+      },
+
+      lineHeight: {
+        56: '56px',
+        26: '26px',
+        22: '22px',
       }
     },
   },

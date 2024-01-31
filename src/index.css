@@ -1,3 +1,32 @@
+@font-face {
+  font-family: manrope;
+  src: url(./assets/fonts/manrope/Manrope-Bold.ttf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: manrope;
+  src: url(./assets/fonts/manrope/Manrope-SemiBold.ttf);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: manrope;
+  src: url(./assets/fonts/manrope/Manrope-Medium.ttf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: manrope;
+  src: url(./assets/fonts/manrope/Manrope-Regular.ttf);
+  font-weight: 400;
+}
+
+
+
+
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,7 +38,78 @@
 
 
 /* components  */
-@layer components {}
+@layer components {
+
+  /* font */
+  /* font bold */
+  .text-bold-44 {
+    @apply text-44 leading-56 font-bold;
+  }
+
+  .text-bold-20 {
+    @apply text-xl leading-7 font-bold;
+  }
+
+  .text-bold-24 {
+    @apply text-2xl font-bold;
+  }
+
+  /* font medium */
+  .text-semibold-20 {
+    @apply text-xl leading-7 font-semibold;
+  }
+
+  /* font regular */
+  .text-regular-20 {
+    @apply text-xl leading-7 font-normal;
+  }
+
+  .text-regular-18 {
+    @apply text-lg font-normal leading-22;
+  }
+
+  .text-regular-16 {
+    @apply text-base font-normal leading-5;
+  }
+
+
+
+  /* flex & grid */
+  .flex-center {
+    @apply flex items-center;
+  }
+
+  .flex-center-between {
+    @apply flex items-center justify-between;
+  }
+
+  .flex-end {
+    @apply flex items-end;
+  }
+
+  .flex-end-between {
+    @apply flex items-end justify-end;
+  }
+
+
+
+
+
+  /* 
+  buttons */
+  .btn-square {
+    @apply flex-center;
+    border-radius: 10px;
+  }
+
+  .btn-round {
+    @apply flex-center gap-1.5 rounded-full px-7;
+  }
+
+  .btn-normal {
+    @apply bg-transparent rounded-none inline-block text-white border-0;
+  }
+}
 
 
 
@@ -21,8 +121,31 @@
 /* base */
 @layer base {
   body {
-    background: #fff;
-    font-family: sans-serif;
+    @apply bg-primary-black text-primary-white text-regular-18;
+    font-family: 'manrope', sans-serif;
+  }
+
+
+  button {
+    @apply bg-primary-green bg-opacity-12 py-3 px-5 text-primary-green text-regular-18 rounded-lg;
+  }
+
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold text-white;
+  }
+
+  h2 {
+    @apply text-bold-44;
+  }
+
+  h3 {
+    @apply text-semibold-20;
   }
 }
 
@@ -35,6 +158,6 @@
 /* utilites */
 @layer utilities {
   .container {
-    @apply max-w-7xl w-full mx-auto px-5;
+    @apply max-w-1640 w-full mx-auto px-5;
   }
 }

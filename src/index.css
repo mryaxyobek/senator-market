@@ -54,7 +54,7 @@
 
     50% {
       transform: scale(1.1);
-      filter: drop-shadow(0px 0px 4px #07AE6E);
+      filter: drop-shadow(0px 0px 12px rgba(7, 174, 110, 0.5));
     }
   }
 
@@ -122,11 +122,9 @@
 
 
 
-  /* 
-  buttons */
-
+  /* buttons */
   .btn-default {
-    @apply bg-primary-green bg-opacity-12 py-3 px-5 text-primary-green text-regular-18 rounded-18;
+    @apply bg-primary-green bg-opacity-12 py-3 px-5 text-primary-green text-regular-18 rounded-xl;
   }
 
   .btn-square {
@@ -147,6 +145,7 @@
 
 
   /* home */
+  /* header */
   .header nav ul li a {
     @apply relative;
   }
@@ -159,6 +158,45 @@
     @apply absolute block w-full h-0.5 bg-primary-green -top-10;
     content: "";
     transition: top 0.3s ease-in-out;
+  }
+
+  .hamburger-btn {
+    @apply hidden btn-square p-2 border-2 border-white border-opacity-0 focus:border-opacity-50 focus:outline-0 max-950:block;
+  }
+
+  .hamburger-btn_items-wrapper {
+    @apply flex-center flex-col justify-center relative w-7 h-7 max-650:w-6 max-650:h-6;
+    transition: transform 0.2s linear;
+  }
+
+  .hamburger-btn_item {
+    @apply inline-block absolute w-full h-0.5 bg-primary-green;
+    transition: transform 0.2s linear;
+  }
+
+  .hamburger-btn_item:nth-child(1) {
+    transform: translateY(8px);
+  }
+
+  .hamburger-btn_item:nth-child(3) {
+    transform: translateY(-8px);
+  }
+
+  /* active hamburger button */
+  .hamburger-btn-active .hamburger-btn_items-wrapper {
+    transform: rotate(45deg);
+  }
+
+  .hamburger-btn-active .hamburger-btn_item:nth-child(1) {
+    transform: translateY(0) rotate(180deg);
+  }
+
+  .hamburger-btn-active .hamburger-btn_item:nth-child(2) {
+    transform: rotate(90deg);
+  }
+
+  .hamburger-btn-active .hamburger-btn_item:nth-child(3) {
+    transform: translateY(0) rotate(90deg);
   }
 }
 
@@ -210,5 +248,10 @@
 @layer utilities {
   .container {
     @apply max-w-1640 w-full mx-auto px-5;
+  }
+
+  .transition-colors {
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
   }
 }

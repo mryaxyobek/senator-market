@@ -53,7 +53,11 @@ export default {
     },
 
     screens: {
+      1140: '1140px',
+      950: '950px',
       768: '768px',
+      650: '650px',
+      470: '470px',
     }
   },
   plugins: [],

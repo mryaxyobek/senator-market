@@ -28,9 +28,11 @@ export default {
       },
 
 
+      // background      
       backgroundOpacity: {
         12: '0.12',
       },
+
 
       // font
       fontSize: {
@@ -41,6 +43,12 @@ export default {
         56: '56px',
         26: '26px',
         22: '22px',
+      },
+
+
+      // border
+      borderRadius: {
+        18: '18px',
       }
     },
   },

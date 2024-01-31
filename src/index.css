@@ -97,6 +97,11 @@
 
   /* 
   buttons */
+
+  .btn-default {
+    @apply bg-primary-green bg-opacity-12 py-3 px-5 text-primary-green text-regular-18 rounded-18;
+  }
+
   .btn-square {
     @apply flex-center;
     border-radius: 10px;
@@ -107,7 +112,26 @@
   }
 
   .btn-normal {
-    @apply bg-transparent rounded-none inline-block text-white border-0;
+    @apply bg-transparent rounded-none inline-block text-white border-0 p-0;
+  }
+
+
+
+
+
+  /* home */
+  .header nav ul li a {
+    @apply relative;
+  }
+
+  .header nav ul li .active::before {
+    top: -34px;
+  }
+
+  .header nav ul li a::before {
+    @apply absolute block w-full h-0.5 bg-primary-green -top-10;
+    content: "";
+    transition: top 0.3s ease-in-out;
   }
 }
 
@@ -127,7 +151,7 @@
 
 
   button {
-    @apply bg-primary-green bg-opacity-12 py-3 px-5 text-primary-green text-regular-18 rounded-lg;
+    @apply btn-default;
   }
 
 

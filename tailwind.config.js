@@ -51,6 +51,10 @@ export default {
         18: '18px',
       }
     },
+
+    screens: {
+      768: '768px',
+    }
   },
   plugins: [],
 }

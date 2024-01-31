@@ -40,6 +40,33 @@
 /* components  */
 @layer components {
 
+  /* loaders */
+  .main-loader {
+    @apply flex-center justify-center fixed w-full min-h-screen bg-primary-black top-0 right-0;
+  }
+
+  @keyframes main-loader {
+
+    100%,
+    0% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(1.1);
+      filter: drop-shadow(0px 0px 4px #07AE6E);
+    }
+  }
+
+  .main-loader_img {
+    @apply w-12 h-12 max-768:w-9 max-768:h-9;
+    animation: main-loader 2s ease;
+    animation-delay: 2.5s;
+  }
+
+
+
+
   /* font */
   /* font bold */
   .text-bold-44 {

@@ -21,6 +21,10 @@ export default {
         1640: '1640px',
       },
 
+      maxHeight: {
+        300: '300px',
+      },
+
 
       // transfrom, z
       zIndex: {
@@ -53,10 +57,14 @@ export default {
     },
 
     screens: {
+      1350: '1350px',
       1140: '1140px',
+      1100: '1100px',
       950: '950px',
+      800: '800px',
       768: '768px',
       650: '650px',
+      500: '500px',
       470: '470px',
     }
   },

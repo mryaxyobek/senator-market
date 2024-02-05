@@ -150,6 +150,11 @@
     @apply bg-transparent rounded-none inline-block text-white border-0 p-0;
   }
 
+  .btn-white {
+    @apply fixed flex-center justify-center w-12 h-12 rounded-full bg-white bottom-8 right-8 text-primary-green hover:text-primary-white hover:bg-primary-green shadow max-650:right-5 max-650:bottom-5 z-10;
+    transition: transform 0.3s ease, background-color 0.2s ease, fill 0.2s ease, opacity 0.2s ease, color 0.2s ease;
+  }
+
 
 
 
@@ -317,6 +322,11 @@
 
 /* base */
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+
   body {
     @apply bg-primary-black text-primary-white text-regular-18;
     font-family: 'manrope', sans-serif;

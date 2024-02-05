@@ -25,8 +25,8 @@ const MainRoot = () => {
         <div className='flex flex-col min-h-screen'>
             <Header />
             {
-                // loader &&
-                // <MainLoader />
+                loader &&
+                <MainLoader />
             }
             <Link to='/contact' className={`${scrollToTopBtnValue ? '-translate-y-14 scale-75 opacity-70' : 'translate-y-0'} btn-white`}>
                 <svg width="32" height="32" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">

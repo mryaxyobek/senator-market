@@ -134,7 +134,7 @@
 
   /* buttons */
   .btn-default {
-    @apply flex-center justify-center  bg-primary-green bg-opacity-12 py-3 px-5 text-primary-green text-regular-18 rounded-xl;
+    @apply flex-center justify-center bg-primary-green bg-opacity-12 py-3 px-5 text-primary-green text-regular-18 rounded-xl;
   }
 
   .btn-square {
@@ -265,6 +265,7 @@
   .section {
     @apply py-12 space-y-9 max-550:space-y-8 max-550:py-10;
   }
+
   .section-content {
     @apply space-y-9 max-550:space-y-8;
   }
@@ -283,6 +284,27 @@
 
   .section-footer_link {
     @apply hidden btn-round btn-default bg-transparent border border-primary-green w-full text-medium-20 max-550:flex;
+  }
+
+
+
+
+
+  /* hero */
+  .hero-main-swiper {
+    @apply w-full h-auto rounded-18 max-1350:rounded-xl max-768:rounded-lg max-550:rounded-md;
+  }
+
+  .hero-ads {
+    @apply w-full h-full rounded-18 bg-primary-green/10 p-2.5 border-2 border-primary-green/70 max-1350:rounded-xl max-768:rounded-lg max-550:rounded-md max-1100:p-1 max-470:p-2;
+  }
+
+  .hero-ads_swiper {
+    @apply w-full h-full rounded-lg max-1350:rounded-md max-768:rounded max-550:rounded-sm;
+  }
+
+  .hero-ads_swiper img {
+    @apply h-full rounded-lg max-1350:rounded-md max-768:rounded max-550:rounded-sm;
   }
 }
 

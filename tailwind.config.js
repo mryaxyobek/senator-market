@@ -26,6 +26,12 @@ export default {
       },
 
 
+      // flex & grid
+      gridTemplateColumns: {
+        15: 'repeat(15,1fr)'
+      },
+
+
       // transfrom, z
       zIndex: {
         1640: '1640px',
@@ -45,7 +51,7 @@ export default {
         34: '34px',
         30: '30px',
       },
-      
+
       lineHeight: {
         56: '56px',
         48: '48px',

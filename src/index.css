@@ -362,4 +362,15 @@
     transition-duration: 0.3s;
     transition-timing-function: linear;
   }
+
+  .py-12 {
+    @apply pt-12 pb-12 max-768:py-10;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .py-12 {
+    padding-top: 32px !important;
+    padding-bottom: 32px !important;
+  }
 }

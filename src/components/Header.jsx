@@ -3,15 +3,23 @@ import { Link, NavLink } from 'react-router-dom';
 
 // images
 import search from '../assets/images/svg/search.svg';
-import like from '../assets/images/svg/like.svg';
-import developer from '../assets/images/svg/developer.svg';
 import favicon from '../assets/images/svg/favicon-32x32.svg';
 
 const Header = () => {
     const [activeHamburgerBtn, setActiveHamburgerBtn] = useState(false);
+    const [openSearch, setOpenSearch] = useState(false);
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            setOpenSearch(false);
+            setActiveHamburgerBtn(false);
+        } else if (e.ctrlKey && e.key === '/') {
+            setOpenSearch(true);
+        };
+    });
     return (
         <header className='header py-5'>
             <div className="container">
+                {/* header content */}
                 <div className="flex-center-between">
                     {/* logo */}
                     <Link to='/' title='senator market' aria-label='senator market' className='text-bold-20 uppercase max-470:hidden'>SENATOR MARKET</Link>
@@ -40,8 +48,15 @@ const Header = () => {
                         </nav>
 
                         {/* search btn */}
-                        <button aria-label='search' title='search' className="btn-normal text-white hover:text-primary-green">
-                            <svg width="29" height="28" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <button
+                            aria-label='search'
+                            title='search'
+                            className="btn-normal text-white hover:text-primary-green"
+                            onClick={() => {
+                                setOpenSearch(true);
+                            }}
+                        >
+                            <svg width="28" height="28" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path className='transition-colors' d="M24.1884 25.2071C24.5789 25.5976 25.2121 25.5976 25.6026 25.2071C25.9931 24.8166 25.9931 24.1834 25.6026 23.7929L24.1884 25.2071ZM18.7439 19.7624L24.1884 25.2071L25.6026 23.7929L20.1582 18.3482L18.7439 19.7624ZM12.7844 20.2775C8.42749 20.2775 4.89551 16.7456 4.89551 12.3886H2.89551C2.89551 17.8501 7.32292 22.2775 12.7844 22.2775V20.2775ZM20.6733 12.3886C20.6733 16.7456 17.1413 20.2775 12.7844 20.2775V22.2775C18.2459 22.2775 22.6733 17.8501 22.6733 12.3886H20.6733ZM12.7844 4.49976C17.1413 4.49976 20.6733 8.03173 20.6733 12.3886H22.6733C22.6733 6.92716 18.2459 2.49976 12.7844 2.49976V4.49976ZM12.7844 2.49976C7.32292 2.49976 2.89551 6.92716 2.89551 12.3886H4.89551C4.89551 8.03173 8.42749 4.49976 12.7844 4.49976V2.49976Z" fill="currentColor" />
                             </svg>
 
@@ -83,6 +98,43 @@ const Header = () => {
                         </button>
                     </div>
                 </div>
+
+                {/* seaarch */}
+                {/* search header */}
+                <div className={`${openSearch ? 'translate-y-0' : '-translate-y-full'} fixed top-0 right-0 bg-primary-black py-[23px] w-full z-10 transition-transform max-950:py-[21px] max-650:py-[19px]`}>
+                    <div className="container">
+                        <div className="flex-center gap-5 max-500:items-stretch max-500:gap-4">
+                            <img title='search' width={28} height={28} src={search} alt="search icon" className="w-7 h-7 max-500:hidden" />
+                            <form
+                                onSubmit={(e) => {
+                                    e.preventDefault();
+                                }}
+                                className='relative w-full'
+                            >
+                                <input
+                                    title='search ctrl + /'
+                                    type="text"
+                                    placeholder='Qidirish...'
+                                    className='w-full px-5 py-3 bg-primary-white/20 rounded-xl placeholder:text-primary-white/70 max-500:px-3 max-500:py-[11px]'
+                                />
+                            </form>
+                            <button
+                                className='uppercase text-primary-red bg-primary-red bg-opacity-12 focus:outline-primary-red/70 max-650:p-[9px]'
+                                onClick={() => {
+                                    setOpenSearch(false);
+                                }}
+                            >
+                                <span className='max-650:hidden'>Yopish</span>
+                                <svg className='hidden max-650:block' width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                    xmlnsXlink="http://www.w3.org/1999/xlink">
+                                    <path id="Vector 45" d="M5 23L14 14L23 5M14 14L5 5L23 23" stroke="#C70909"
+                                        strokeWidth="2" strokeLinejoin="round" strokeLinecap="round" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                {/* search results */}
             </div>
         </header>
     )

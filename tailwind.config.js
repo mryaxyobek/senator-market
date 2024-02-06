@@ -12,6 +12,7 @@ export default {
           green: '#07AE6E',
           gray: '#B1B1B1',
           white: '#ffffff',
+          red: '#C70909'
         },
       },
 

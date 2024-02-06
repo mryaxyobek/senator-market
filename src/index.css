@@ -322,6 +322,10 @@
 
 /* base */
 @layer base {
+  *:focus {
+    @apply outline-2 outline outline-primary-green/70 outline-offset-0;
+  }
+
   html {
     scroll-behavior: smooth;
   }
@@ -369,7 +373,12 @@
   }
 
   .transition-colors {
-    transition-duration: 0.3s;
+    transition-duration: 0.25s;
+    transition-timing-function: linear;
+  }
+
+  .transition-transform {
+    transition-duration: 0.25s;
     transition-timing-function: linear;
   }
 

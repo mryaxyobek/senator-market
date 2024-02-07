@@ -40,6 +40,18 @@
 /* components  */
 @layer components {
 
+  /* scrolls */
+  .scroll_default::-webkit-scrollbar {
+    @apply w-2 bg-white/0 rounded-full;
+  }
+
+  .scroll_default::-webkit-scrollbar-thumb {
+    @apply bg-primary-green/50 rounded-full hover:bg-primary-green/70;
+  }
+
+
+
+
   /* loaders */
   .main-loader {
     @apply flex-center justify-center fixed w-full min-h-screen bg-primary-black top-0 right-0 z-50;
@@ -266,6 +278,30 @@
   }
 
 
+  /* search */
+  .search_filter-btns-wrapper {
+    @apply flex gap-4 pt-9 pb-4 mb-9 overflow-x-auto px-0.5;
+    scroll-behavior: smooth;
+  }
+
+  .search_filter-btn {
+    @apply min-w-max text-white bg-white/10 focus:outline-primary-white/70;
+  }
+
+  .search_filter-btns-wrapper::-webkit-scrollbar {
+    @apply bg-primary-white h-0.5;
+  }
+
+  .search_filter-btns-wrapper::-webkit-scrollbar-thumb {
+    @apply bg-primary-green;
+  }
+
+  .search_results {
+    @apply grid grid-cols-2 gap-5;
+  }
+
+
+
   /* sections */
   .section {
     @apply py-12 space-y-9 max-550:space-y-8 max-550:py-10;
@@ -332,7 +368,7 @@
 
 
   body {
-    @apply bg-primary-black text-primary-white text-regular-18;
+    @apply bg-primary-black text-primary-white text-regular-18 scroll_default;
     font-family: 'manrope', sans-serif;
   }
 

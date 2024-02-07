@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
 // images
 import search from '../assets/images/svg/search.svg';
 import favicon from '../assets/images/svg/favicon-32x32.svg';
+import { searchFilterBtns } from '../assets/data';
+import ProductCard from './ProductCard';
 
 const Header = () => {
     const [activeHamburgerBtn, setActiveHamburgerBtn] = useState(false);
@@ -16,6 +18,15 @@ const Header = () => {
             setOpenSearch(true);
         };
     });
+
+    useEffect(() => {
+        if (openSearch) {
+            document.body.classList.add('overflow-y-hidden');
+            window.scrollTo(0, 0);
+        } else {
+            document.body.classList.remove('overflow-y-hidden');
+        }
+    }, [openSearch]);
     return (
         <header className='header py-5'>
             <div className="container">
@@ -101,7 +112,7 @@ const Header = () => {
 
                 {/* seaarch */}
                 {/* search header */}
-                <div className={`${openSearch ? 'translate-y-0' : '-translate-y-full'} fixed top-0 right-0 bg-primary-black py-[23px] w-full z-10 transition-transform max-950:py-[21px] max-650:py-[19px]`}>
+                <div className={`${openSearch ? 'translate-y-0' : '-translate-y-full'} fixed top-0 right-0 bg-primary-black py-[23px] w-full z-30 transition-transform max-950:py-[21px] max-650:py-[19px]`}>
                     <div className="container">
                         <div className="flex-center gap-5 max-500:items-stretch max-500:gap-4">
                             <img title='search' width={28} height={28} src={search} alt="search icon" className="w-7 h-7 max-500:hidden" />
@@ -134,7 +145,33 @@ const Header = () => {
                         </div>
                     </div>
                 </div>
-                {/* search results */}
+
+                {/* search body (results) */}
+                <div className={`${openSearch ? 'translate-y-0' : '-translate-y-[calc(100%+92px)]'} fixed bottom-0 right-0 bg-primary-black w-full h-[calc(100%-92px)] max-950:h-[calc(100%-88px)] max-650:h-[calc(100%-84px)] z-20 transition-transform`}>
+                    <div className="w-full h-full bg-primary-white/10 overflow-y-auto pb-6 !pr-0 scroll_default">
+                        <div className="flex flex-col container max-[1640px]:pr">
+                            {/* filter btns */}
+                            <div className="search_filter-btns-wrapper">
+                                {
+                                    searchFilterBtns.map((button) => {
+                                        return (
+                                            <button key={button.id} className="search_filter-btn">{button.body}</button>
+                                        )
+                                    })
+                                }
+                            </div>
+
+                            {/* search results */}
+                            <div>
+                                <ul className="products-grid">
+                                    {
+                                        [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(item => <ProductCard key={item} />)
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </header>
     )

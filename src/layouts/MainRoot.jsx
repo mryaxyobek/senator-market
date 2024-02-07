@@ -6,9 +6,12 @@ import MainLoader from '../components/MainLoader';
 const MainRoot = () => {
     const [loader, setLoader] = useState(false);
     useEffect(() => {
+        document.body.classList.add('overflow-y-hidden');
+        window.scrollTo(0, 0);
         setLoader(true);
         setTimeout(() => {
             setLoader(false);
+            document.body.classList.remove('overflow-y-hidden');
         }, 5000);
     }, []);
 

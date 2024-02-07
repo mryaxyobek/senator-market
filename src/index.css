@@ -182,7 +182,7 @@
   }
 
   .product-card_like-btn {
-    @apply absolute p-1 rounded-md bg-primary-black/60 top-4 right-4;
+    @apply absolute p-1 rounded-md bg-primary-black/50 top-4 right-4 backdrop-filter backdrop-blur-[2px];
   }
 
   .product-card_content {

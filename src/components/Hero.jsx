@@ -59,12 +59,26 @@ const Hero = () => {
                             autoplay={{
                                 delay: 4000,
                             }}
+                            breakpoints={{
+                                400: {
+                                    slidesPerView: 2,
+                                    spaceBetween: 10,
+                                },
+                                650: {
+                                    slidesPerView: 3,
+                                    spaceBetween: 10,
+                                },
+                                1100: {
+                                    slidesPerView: 1,
+                                    spaceBetween: 20,
+                                }
+                            }}
                             loop={true}
                             pagination={{
                                 clickable: true,
                             }}
                             modules={[Pagination, Autoplay]}
-                            className="hero-ads_swiper max-1100:hidden"
+                            className="hero-ads_swiper"
                         >
                             <SwiperSlide>
                                 <Link to='/' className=''>
@@ -88,8 +102,7 @@ const Hero = () => {
                             </SwiperSlide>
                         </Swiper>
 
-                        {/* max 1100 */}
-                        <Swiper
+                        {/* <Swiper
                             slidesPerView={3}
                             spaceBetween={6}
                             autoplay={{
@@ -124,7 +137,6 @@ const Hero = () => {
                             </SwiperSlide>
                         </Swiper>
 
-                        {/* max 470 */}
                         <Swiper
                             slidesPerView={1}
                             spaceBetween={10}
@@ -158,7 +170,7 @@ const Hero = () => {
                                     <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Pubg.jpg" alt="" />
                                 </Link>
                             </SwiperSlide>
-                        </Swiper>
+                        </Swiper> */}
                     </div>
 
                 </div>

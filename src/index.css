@@ -91,7 +91,7 @@
   }
 
   .text-bold-24 {
-    @apply text-2xl font-bold;
+    @apply text-2xl font-bold max-768:text-bold-20 max-400:text-regular-18 max-400:font-bold;
   }
 
   /* font semibold */

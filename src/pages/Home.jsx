@@ -1,6 +1,7 @@
 import React from 'react';
 import Hero from '../components/Hero';
 import TopAccounts from '../components/TopAccounts';
+import UcSection from '../components/UcSection';
 import Accounts from '../components/Accounts';
 
 const Home = () => {
@@ -8,6 +9,7 @@ const Home = () => {
         <>
             <Hero />
             <TopAccounts />
+            <UcSection />
             <Accounts />
         </>
     )

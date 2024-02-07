@@ -18,6 +18,14 @@ export default {
 
 
       // w, h
+      width: {
+        72: '72px'
+      },
+
+      height: {
+        72: '72px'
+      },
+
       maxWidth: {
         1640: '1640px',
       },
@@ -79,6 +87,8 @@ export default {
       550: '550px',
       500: '500px',
       470: '470px',
+      400: '400px',
+      350: '350px',
     }
   },
   plugins: [],

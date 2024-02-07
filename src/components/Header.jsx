@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
 // images
@@ -10,6 +10,9 @@ import ProductCard from './ProductCard';
 const Header = () => {
     const [activeHamburgerBtn, setActiveHamburgerBtn] = useState(false);
     const [openSearch, setOpenSearch] = useState(false);
+    const searchInputRef = useRef(null);
+    const [openClearBtn, setOpenClearBtn] = useState(false);
+
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
             setOpenSearch(false);
@@ -19,13 +22,17 @@ const Header = () => {
         };
     });
 
+
     useEffect(() => {
         if (openSearch) {
             document.body.classList.add('overflow-y-hidden');
             window.scrollTo(0, 0);
+            searchInputRef.current.focus();
         } else {
             document.body.classList.remove('overflow-y-hidden');
-        }
+            searchInputRef.current.value = '';
+            setOpenClearBtn(false);
+        };
     }, [openSearch]);
     return (
         <header className='header py-5'>
@@ -110,8 +117,8 @@ const Header = () => {
                     </div>
                 </div>
 
-                {/* seaarch */}
-                {/* search header */}
+
+                {/* seaarch (header) */}
                 <div className={`${openSearch ? 'translate-y-0' : '-translate-y-full'} fixed top-0 right-0 bg-primary-black py-[23px] w-full z-30 transition-transform max-950:py-[21px] max-650:py-[19px]`}>
                     <div className="container">
                         <div className="flex-center gap-5 max-500:items-stretch max-500:gap-4">
@@ -120,16 +127,48 @@ const Header = () => {
                                 onSubmit={(e) => {
                                     e.preventDefault();
                                 }}
-                                className='relative w-full'
+                                className='flex-center relative w-full'
                             >
+
                                 <input
-                                    title='search ctrl + /'
+                                    title='search (ctrl + /)'
+                                    ref={searchInputRef}
                                     type="text"
                                     placeholder='Qidirish...'
-                                    className='w-full px-5 py-3 bg-primary-white/20 rounded-xl placeholder:text-primary-white/70 max-500:px-3 max-500:py-[11px]'
+                                    className='w-full px-5 pr-11 py-3 bg-primary-white/20 rounded-xl placeholder:text-primary-white/70 max-500:px-3 max-500:py-[11px]'
+                                    onChange={(e) => {
+                                        if (e.target.value === '') {
+                                            setOpenClearBtn(false);
+                                        } else {
+                                            setOpenClearBtn(true);
+                                        };
+                                    }}
                                 />
+
+                                {/* clearing search input valuse */}
+                                <button
+                                    className={`${openClearBtn ? 'block' : 'hidden'} absolute right-0.5 focus:outline-none focus:text-primary-green text-white p-2`}
+                                    type='button'
+                                    title='clearing input values'
+                                    aria-label='clearing input values'
+                                    onClick={() => {
+                                        searchInputRef.current.value = '';
+                                        searchInputRef.current.focus();
+                                        setOpenClearBtn(false);
+                                    }}
+                                >
+                                    <svg className='w-6 h-6 max-550:w-5 max-500:h-5' width="24" height="24" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        xmlnsXlink="http://www.w3.org/1999/xlink">
+                                        <path id="Vector 45" d="M5 23L14 14L23 5M14 14L5 5L23 23" stroke="currentColor"
+                                            strokeWidth="2" strokeLinejoin="round" strokeLinecap="round" />
+                                    </svg>
+                                </button>
                             </form>
+
+                            {/* close */}
                             <button
+                                title='close'
+                                aria-label='close'
                                 className='uppercase text-primary-red bg-primary-red bg-opacity-12 focus:outline-primary-red/70 max-650:p-[9px]'
                                 onClick={() => {
                                     setOpenSearch(false);

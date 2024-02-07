@@ -8,7 +8,7 @@ const ProductCard = () => {
     return (
         <li className='product-card'>
             <img width={304} height={210} src={productImg} alt="senator market pubg account picture" className="product-card_img" />
-            <button aria-label='favorite toggle' className="product-card_like-btn">
+            <button title='Favorite toggle' aria-label='Favorite toggle' className="product-card_like-btn">
                 <svg width="28" height="28" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                     className='transition-colors'

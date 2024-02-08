@@ -12,6 +12,7 @@ import '../css/swiperStyles.css';
 // import required modules
 import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 import { Link } from 'react-router-dom';
+import { slide1, web } from '../assets/data';
 
 const Hero = () => {
     return (
@@ -36,17 +37,17 @@ const Hero = () => {
                         >
                             <SwiperSlide>
                                 <Link to='/'>
-                                    <img src="https://image.api.playstation.com/vulcan/ap/rnd/202312/1402/a7091ca036ce62de86249da1ff0c92e5057416cd639a382e.jpg" alt="" className="" />
+                                    <img src={slide1} alt="" className="" />
                                 </Link>
                             </SwiperSlide>
                             <SwiperSlide>
                                 <Link to='/'>
-                                    <img src="https://image.api.playstation.com/vulcan/ap/rnd/202312/1402/a7091ca036ce62de86249da1ff0c92e5057416cd639a382e.jpg" alt="" className="" />
+                                    <img src={slide1} alt="" className="" />
                                 </Link>
                             </SwiperSlide>
                             <SwiperSlide>
                                 <Link to='/'>
-                                    <img src="https://image.api.playstation.com/vulcan/ap/rnd/202312/1402/a7091ca036ce62de86249da1ff0c92e5057416cd639a382e.jpg" alt="" className="" />
+                                    <img src={slide1} alt="" className="" />
                                 </Link>
                             </SwiperSlide>
                         </Swiper>
@@ -82,22 +83,22 @@ const Hero = () => {
                         >
                             <SwiperSlide>
                                 <Link to='/' className=''>
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Pubg.jpg" alt="" />
+                                    <img src={web} alt="" />
                                 </Link>
                             </SwiperSlide>
                             <SwiperSlide>
                                 <Link to='/' className=''>
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Pubg.jpg" alt="" />
+                                    <img src={web} alt="" />
                                 </Link>
                             </SwiperSlide>
                             <SwiperSlide>
                                 <Link to='/' className=''>
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Pubg.jpg" alt="" />
+                                    <img src={web} alt="" />
                                 </Link>
                             </SwiperSlide>
                             <SwiperSlide>
                                 <Link to='/' className=''>
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Pubg.jpg" alt="" />
+                                    <img src={web} alt="" />
                                 </Link>
                             </SwiperSlide>
                         </Swiper>
@@ -117,22 +118,22 @@ const Hero = () => {
                         >
                             <SwiperSlide>
                                 <Link to='/' className=''>
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Pubg.jpg" alt="" />
+                                    <img src={web} alt="" />
                                 </Link>
                             </SwiperSlide>
                             <SwiperSlide>
                                 <Link to='/' className=''>
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Pubg.jpg" alt="" />
+                                    <img src={web} alt="" />
                                 </Link>
                             </SwiperSlide>
                             <SwiperSlide>
                                 <Link to='/' className=''>
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Pubg.jpg" alt="" />
+                                    <img src={web} alt="" />
                                 </Link>
                             </SwiperSlide>
                             <SwiperSlide>
                                 <Link to='/' className=''>
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Pubg.jpg" alt="" />
+                                    <img src={web} alt="" />
                                 </Link>
                             </SwiperSlide>
                         </Swiper>
@@ -152,22 +153,22 @@ const Hero = () => {
                         >
                             <SwiperSlide>
                                 <Link to='/' className=''>
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Pubg.jpg" alt="" />
+                                    <img src={web} alt="" />
                                 </Link>
                             </SwiperSlide>
                             <SwiperSlide>
                                 <Link to='/' className=''>
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Pubg.jpg" alt="" />
+                                    <img src={web} alt="" />
                                 </Link>
                             </SwiperSlide>
                             <SwiperSlide>
                                 <Link to='/' className=''>
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Pubg.jpg" alt="" />
+                                    <img src={web} alt="" />
                                 </Link>
                             </SwiperSlide>
                             <SwiperSlide>
                                 <Link to='/' className=''>
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Pubg.jpg" alt="" />
+                                    <img src={web} alt="" />
                                 </Link>
                             </SwiperSlide>
                         </Swiper> */}

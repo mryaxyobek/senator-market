@@ -14,7 +14,7 @@ const MainRoot = () => {
         setTimeout(() => {
             setLoader(false);
             document.body.classList.remove('overflow-y-hidden');
-        }, 5000);
+        }, 1000);
     }, []);
 
 

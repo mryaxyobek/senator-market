@@ -1,3 +1,11 @@
+import logo from './images/logo3.png';
+import slide1 from './images/slide1.png';
+import web from './images/web.jpg';
+
+export {
+    logo, slide1, web
+}
+
 export const searchFilterBtns = [
     {
         id: 0,
@@ -63,4 +71,5 @@ export const searchFilterBtns = [
         id: 15,
         body: "Silvanus"
     },
-]
+];
+

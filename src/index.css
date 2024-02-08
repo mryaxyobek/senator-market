@@ -49,9 +49,6 @@
     @apply bg-primary-green/50 rounded-full hover:bg-primary-green/70;
   }
 
-
-
-
   /* loaders */
   @keyframes main-loader {
 

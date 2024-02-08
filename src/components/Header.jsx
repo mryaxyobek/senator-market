@@ -4,7 +4,7 @@ import { Link, NavLink } from 'react-router-dom';
 // images
 import search from '../assets/images/svg/search.svg';
 import favicon from '../assets/images/svg/favicon-32x32.svg';
-import { searchFilterBtns } from '../assets/data';
+import { logo, searchFilterBtns } from '../assets/data';
 import ProductCard from './ProductCard';
 
 const Header = () => {
@@ -13,34 +13,33 @@ const Header = () => {
     const searchInputRef = useRef(null);
     const [openClearBtn, setOpenClearBtn] = useState(false);
 
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-            setOpenSearch(false);
-            setActiveHamburgerBtn(false);
-        } else if (e.ctrlKey && e.key === '/') {
-            setOpenSearch(true);
-        };
-    });
-
-
     useEffect(() => {
-        if (openSearch) {
-            document.body.classList.add('overflow-y-hidden');
-            window.scrollTo(0, 0);
-            searchInputRef.current.focus();
-        } else {
-            document.body.classList.remove('overflow-y-hidden');
-            searchInputRef.current.value = '';
-            setOpenClearBtn(false);
+        const handleKeyDown = (e) => {
+            if (e.key === 'Escape') {
+                setOpenSearch(false);
+                setActiveHamburgerBtn(false);
+            } else if (e.ctrlKey && e.key === '/') {
+                setOpenSearch(true);
+            }
         };
-    }, [openSearch]);
+
+        document.addEventListener('keydown', handleKeyDown);
+
+        return () => {
+            document.removeEventListener('keydown', handleKeyDown);
+        };
+    }, [openSearch, activeHamburgerBtn]);
+
+
     return (
         <header className='header py-5'>
             <div className="container">
                 {/* header content */}
                 <div className="flex-center-between">
                     {/* logo */}
-                    <Link to='/' title='senator market' aria-label='senator market' className='text-bold-20 uppercase max-470:hidden'>SENATOR MARKET</Link>
+                    <Link to='/' title='senator market' aria-label='senator market' className='text-bold-20 uppercase max-470:hidden'>
+                        <img className='w-52' src={logo} alt="" />
+                    </Link>
 
                     <Link to='/' aria-label='senator market logo' title='senator market' className='hidden max-470:block'>
                         <img width={28} height={28} src={favicon} alt="search icon" className="w-7 h-7" />
@@ -116,7 +115,6 @@ const Header = () => {
                         </button>
                     </div>
                 </div>
-
 
                 {/* search (header) */}
                 <div className={`${openSearch ? 'translate-y-0' : '-translate-y-full'} fixed top-0 right-0 bg-primary-black py-[23px] w-full z-30 transition-transform max-950:py-[21px] max-650:py-[19px]`}>

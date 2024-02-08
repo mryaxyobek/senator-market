@@ -1,4 +1,4 @@
-import logo from './images/logo3.png';
+import logo from './images/logo.png';
 import slide1 from './images/slide1.png';
 import web from './images/web.jpg';
 

@@ -62,11 +62,11 @@ const Hero = () => {
                             }}
                             breakpoints={{
                                 400: {
-                                    slidesPerView: 2,
+                                    slidesPerView: 1,
                                     spaceBetween: 10,
                                 },
                                 650: {
-                                    slidesPerView: 3,
+                                    slidesPerView: 2,
                                     spaceBetween: 10,
                                 },
                                 1100: {
@@ -86,92 +86,13 @@ const Hero = () => {
                                     <img src={web} alt="" />
                                 </Link>
                             </SwiperSlide>
-                            <SwiperSlide>
-                                <Link to='/' className=''>
-                                    <img src={web} alt="" />
-                                </Link>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <Link to='/' className=''>
-                                    <img src={web} alt="" />
-                                </Link>
-                            </SwiperSlide>
+
                             <SwiperSlide>
                                 <Link to='/' className=''>
                                     <img src={web} alt="" />
                                 </Link>
                             </SwiperSlide>
                         </Swiper>
-
-                        {/* <Swiper
-                            slidesPerView={3}
-                            spaceBetween={6}
-                            autoplay={{
-                                delay: 4000,
-                            }}
-                            loop={true}
-                            pagination={{
-                                clickable: true,
-                            }}
-                            modules={[Pagination, Autoplay]}
-                            className="hidden max-1100:block hero-ads_swiper max-470:hidden"
-                        >
-                            <SwiperSlide>
-                                <Link to='/' className=''>
-                                    <img src={web} alt="" />
-                                </Link>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <Link to='/' className=''>
-                                    <img src={web} alt="" />
-                                </Link>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <Link to='/' className=''>
-                                    <img src={web} alt="" />
-                                </Link>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <Link to='/' className=''>
-                                    <img src={web} alt="" />
-                                </Link>
-                            </SwiperSlide>
-                        </Swiper>
-
-                        <Swiper
-                            slidesPerView={1}
-                            spaceBetween={10}
-                            autoplay={{
-                                delay: 4000,
-                            }}
-                            loop={true}
-                            pagination={{
-                                clickable: true,
-                            }}
-                            modules={[Pagination, Autoplay]}
-                            className="hidden max-470:block hero-ads_swiper"
-                        >
-                            <SwiperSlide>
-                                <Link to='/' className=''>
-                                    <img src={web} alt="" />
-                                </Link>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <Link to='/' className=''>
-                                    <img src={web} alt="" />
-                                </Link>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <Link to='/' className=''>
-                                    <img src={web} alt="" />
-                                </Link>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <Link to='/' className=''>
-                                    <img src={web} alt="" />
-                                </Link>
-                            </SwiperSlide>
-                        </Swiper> */}
                     </div>
 
                 </div>

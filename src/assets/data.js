@@ -1,5 +1,5 @@
 import logo from './images/logo.png';
-import slide1 from './images/slide1.png';
+import slide1 from './images/slide1.jpg';
 import web from './images/web.jpg';
 
 export {

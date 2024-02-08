@@ -27,7 +27,7 @@ export default {
       },
 
       maxWidth: {
-        1640: '1640px',
+        1640: '1440px',
       },
 
       maxHeight: {

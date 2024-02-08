@@ -38,7 +38,7 @@ const Header = () => {
                 <div className="flex-center-between">
                     {/* logo */}
                     <Link to='/' title='senator market' aria-label='senator market' className='text-bold-20 uppercase max-470:hidden'>
-                        <img className='w-52' src={logo} alt="" />
+                        <img className='w-44' src={logo} alt="" />
                     </Link>
 
                     <Link to='/' aria-label='senator market logo' title='senator market' className='hidden max-470:block'>

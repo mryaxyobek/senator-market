@@ -16,7 +16,7 @@ const UcSection = () => {
                     <div className="absolute w-96 h-96 rounded-full bg-primary-green/30 z-0 -bottom-20 -right-20 max-550:bg-primary-green/20"></div>
 
                     {/* content */}
-                    <div className="z-10 flex-center gap-28 w-full rounded-3xl border-2 border-white/20 py-20 px-32 bg-white/10 backdrop-filter backdrop-blur-[180px] max-[1400px]:px-28 max-1350:px-20 max-1350:py-10 max-1350:gap-16 max-1100:gap-12 max-1100:flex-col max-950:p-8 max-768:p-7 max-650:p-6 max-500:rounded-2xl max-470:p-5">
+                    <div className="z-10 flex-center gap-28 w-full rounded-3xl max-500:rounded-2xl border-2 border-white/20 py-20 px-32 bg-white/10 backdrop-filter backdrop-blur-[180px] max-[1400px]:px-28 max-1350:px-20 max-1350:py-10 max-1350:gap-16 max-1100:gap-12 max-1100:flex-col max-950:p-8 max-768:p-7 max-650:p-6 max-500:rounded-2xl max-470:p-5">
                         {/* first */}
                         <div className="flex-center flex-col">
                             <img width={412} height={350} src={uc} alt="uc image of senator market" className="max-550:w-full max-550:h-auto" />
@@ -40,7 +40,7 @@ const UcSection = () => {
                         <div className="space-y-3 max-1100:text-center max-650:text-start">
                             <h2 className="text-medium-20 text-primary-green uppercase max-550:text-lg max-500:leading-6">senator uc</h2>
                             <p className="text-bold-38">Sizga UC kerakmi? <br /> Tezkor, ishonchli va arzon uclar faqatgina bizda!</p>
-                            <p className="text-medium-20 text-primary-gray max-550:text-lg max-500:leading-6">Sizga ishonchli UC xizmati kerak bo'lsa unda bizga murojaat qiling. Bizning UC servisimiz 3 yildan ortiqDD mijozlarga xizmat ko'rsatib kelmoqda. Siz ishoning siz bizning UC servisimizdan foydalanganingizga afsuslanmaysiz. O'ylanmang bizga murojaat qiling.</p>
+                            <p className="text-medium-20 text-primary-gray max-550:text-lg max-500:leading-6">Sizga ishonchli UC xizmati kerak bo'lsa unda bizga murojaat qiling. Bizning UC servisimiz 3 yildan ortiqmijozlarga xizmat ko'rsatib kelmoqda. Siz ishoning siz bizning UC servisimizdan foydalanganingizga afsuslanmaysiz. O'ylanmang bizga murojaat qiling.</p>
                             <Link to='uc-service' className='inline-block btn-default px-11 !mt-6 max-470:flex'>Uc sotib olish</Link>
                         </div>
                     </div>

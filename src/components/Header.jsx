@@ -17,19 +17,19 @@ const Header = () => {
         if (e.key === 'Escape') {
             setOpenSearch(false);
             setActiveHamburgerBtn(false);
-        } else if (e.ctrlKey && e.key === '/') {
-            setOpenSearch(true);
         };
     });
 
 
     useEffect(() => {
         if (openSearch) {
-            document.body.classList.add('overflow-y-hidden');
-            window.scrollTo(0, 0);
             searchInputRef.current.focus();
         } else {
-            document.body.classList.remove('overflow-y-hidden');
+            window.scrollTo({
+                top: 0,
+                right: 0,
+                behavior: 'instant'
+            });
             searchInputRef.current.value = '';
             setOpenClearBtn(false);
         };
@@ -131,7 +131,7 @@ const Header = () => {
                             >
 
                                 <input
-                                    title='search (ctrl + /)'
+                                    title='search'
                                     ref={searchInputRef}
                                     type="text"
                                     placeholder='Qidirish...'
@@ -141,7 +141,7 @@ const Header = () => {
                                             setOpenClearBtn(false);
                                         } else {
                                             setOpenClearBtn(true);
-                                        };
+                                        }
                                     }}
                                 />
 

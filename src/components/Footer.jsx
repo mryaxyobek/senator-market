@@ -3,8 +3,8 @@ import { Link, NavLink } from 'react-router-dom';
 
 const Footer = () => {
     return (
-        <footer className=' bg-primary-green/0 pt-10 max-768:pt-8'>
-            <div className="container pb-4 max-650:pb-8">
+        <footer className=''>
+            <div className="container py-7 max-650:pb-8">
                 <div className="flex-center-between max-1100:items-start max-650:flex-col gap-6">
                     <Link to='/' title='senator market' aria-label='senator market' className='text-bold-20 uppercase'>SENATOR MARKET</Link>
 
@@ -74,9 +74,9 @@ const Footer = () => {
             </div>
 
             {/* footer sub content :) */}
-            <div className="py-4 border-t border-primary-green">
+            <div className="py-4 border-t border-primary-green/70">
                 <div className="container text-center text-primary-gray text-regular-16">
-                © 2024. - <span className='uppercase'>Senator market</span>. Barcha huqular himoyalangan
+                    © 2024. - <span className='uppercase'>Senator market</span>. Barcha huqular himoyalangan
                 </div>
             </div>
         </footer>

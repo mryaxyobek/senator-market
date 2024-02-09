@@ -347,6 +347,14 @@
 
 
   /* footer */
+  .d {
+    border-top: 1px solid #07ae6e;
+  }
+
+  .s {
+    background: rgb(7 174 110 / 0.1);
+  }
+
   .footer_social-networks {
     @apply flex gap-3;
   }

@@ -9,6 +9,7 @@ import MainRoot from './layouts/MainRoot';
 
 // pages
 import Home from './pages/Home';
+import ProductDetail from './pages/ProductDetail';
 
 
 const App = () => {
@@ -16,6 +17,7 @@ const App = () => {
     createRoutesFromElements(
       <Route path='/' element={<MainRoot />}>
         <Route index element={<Home />} />
+        <Route path='/account/:accountId' element={<ProductDetail />} />
       </Route>
     )
   )

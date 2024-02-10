@@ -382,6 +382,17 @@
   .footer_social-networks_item-link svg {
     @apply text-primary-white;
   }
+
+
+
+
+
+
+
+  /* account detail */
+  .bg_linear-gradient-black {
+    background: linear-gradient(#00000000, #040D12 50%);
+  }
 }
 
 

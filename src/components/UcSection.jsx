@@ -16,7 +16,7 @@ const UcSection = () => {
                     <div className="absolute w-96 h-96 rounded-full bg-primary-green/30 z-0 -bottom-20 -right-20 max-550:bg-primary-green/20"></div>
 
                     {/* content */}
-                    <div className="z-10 flex-center gap-28 w-full rounded-3xl max-500:rounded-2xl border-2 border-white/20 py-20 px-32 bg-white/10 backdrop-filter backdrop-blur-[180px] max-[1400px]:px-28 max-1350:px-20 max-1350:py-10 max-1350:gap-16 max-1100:gap-12 max-1100:flex-col max-950:p-8 max-768:p-7 max-650:p-6 max-500:rounded-2xl max-470:p-5">
+                    <div className="z-10 flex-center gap-28 w-full rounded-3xl border-2 border-white/20 py-20 px-32 bg-white/10 backdrop-filter backdrop-blur-[180px] max-[1400px]:px-28 max-1350:px-20 max-1350:py-10 max-1350:gap-16 max-1100:gap-12 max-1100:flex-col max-950:p-8 max-768:p-7 max-650:p-6 max-500:rounded-2xl max-470:p-5">
                         {/* first */}
                         <div className="flex-center flex-col">
                             <img width={412} height={350} src={uc} alt="uc image of senator market" className="max-550:w-full max-550:h-auto" />

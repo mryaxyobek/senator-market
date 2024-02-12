@@ -32,7 +32,7 @@ const ProductCard = () => {
                     <span className="product-card_mid-contents_item">12</span>
                 </div>
                 <p className="product-card_price">550.000 so'm</p>
-                <Link to={`/account/123456`} className='product-card_btn'>Sotib olish</Link>
+                <Link to={`/account/123456`} className='product-card_btn'>Buyurtma berish</Link>
             </div>
         </li>
     )

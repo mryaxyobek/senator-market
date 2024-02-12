@@ -167,49 +167,49 @@
 
 
 
-  /* products */
-  .products-grid {
+  /* accounts */
+  .accounts-grid {
     @apply grid grid-cols-5 gap-5 max-1350:grid-cols-4 max-1100:grid-cols-3 max-800:grid-cols-2 max-650:gap-3.5 max-500:grid-cols-1 max-500:gap-y-6;
   }
 
-  .product-card {
+  .account-card {
     @apply relative;
   }
 
-  .product-card_img {
+  .account-card_img {
     @apply w-full max-h-300 object-cover object-center rounded-18;
     aspect-ratio: 152/105;
   }
 
-  .product-card_like-btn {
+  .account-card_like-btn {
     @apply absolute p-1 rounded-md bg-primary-black/50 top-4 right-4 backdrop-filter backdrop-blur-[2px];
   }
 
-  .product-card_content {
+  .account-card_content {
     @apply px-1.5 space-y-3 mt-3;
   }
 
-  .product-card_title {
+  .account-card_title {
     @apply text-medium-20 line-clamp-2;
   }
 
-  .product-card_mid-contents {
+  .account-card_mid-contents {
     @apply flex-end;
   }
 
-  .product-card_mid-contents_item {
+  .account-card_mid-contents_item {
     @apply text-regular-16;
   }
 
-  .product-card_mid-contents_line {
+  .account-card_mid-contents_line {
     @apply w-full border-t border-white border-dashed h-1 mx-0.5;
   }
 
-  .product-card_price {
+  .account-card_price {
     @apply text-medium-20 text-primary-green;
   }
 
-  .product-card_btn {
+  .account-card_btn {
     @apply btn-default btn-square w-full;
   }
 

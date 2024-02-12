@@ -5,19 +5,26 @@ import { Route } from 'react-router-dom';
 
 // layouts
 import MainRoot from './layouts/MainRoot';
+import AccountsRoot from './layouts/AccountsRoot';
 
 
 // pages
 import Home from './pages/Home';
-import ProductDetail from './pages/ProductDetail';
+import AccountDetail from './pages/AccountDetail';
+import AllAccounts from './pages/AllAccounts';
 
 
 const App = () => {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path='/' element={<MainRoot />}>
+
         <Route index element={<Home />} />
-        <Route path='/account/:accountId' element={<ProductDetail />} />
+
+        <Route path='/accounts' element={<AccountsRoot />}>
+          <Route index element={<AllAccounts />} />
+          <Route path='account/:accountId' element={<AccountDetail />} />
+        </Route>
       </Route>
     )
   )

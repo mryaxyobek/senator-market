@@ -5,7 +5,7 @@ import { Link, NavLink } from 'react-router-dom';
 import search from '../assets/images/svg/search.svg';
 import favicon from '../assets/images/svg/favicon-32x32.svg';
 import { searchFilterBtns } from '../assets/data';
-import ProductCard from './ProductCard';
+import AccountCard from './AccountCard';
 
 const Header = () => {
     const [activeHamburgerBtn, setActiveHamburgerBtn] = useState(false);
@@ -202,9 +202,9 @@ const Header = () => {
 
                             {/* search results */}
                             <div>
-                                <ul className="products-grid">
+                                <ul className="accounts-grid">
                                     {
-                                        [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(item => <ProductCard key={item} />)
+                                        [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(item => <AccountCard key={item} />)
                                     }
                                 </ul>
                             </div>

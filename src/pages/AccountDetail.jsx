@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import ProductCard from '../components/ProductCard';
+import AccountCard from '../components/AccountCard';
 
 // images
 import date from '../assets/images/svg/date.svg';
@@ -9,7 +9,7 @@ import rp from '../assets/images/svg/rp.svg';
 import top from '../assets/images/svg/top.svg';
 import productImg from '../assets/images/other/product.jpg';
 
-const ProductDetail = () => {
+const AccountDetail = () => {
     const location = useLocation();
     const description = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta cum, sunt excepturi commodi maxime voluptates repudiandae quae quam, iusto iste impedit mollitia, eligendi aliquam fuga laboriosam maiores laborum pariatur illum iure? Asperiores harum amet aliquam, minima dolores nobis vel eius veniam obcaecati iure tempore possimus quod doloremque pariatur unde beatae quae quaerat molestiae illo odit consequuntur ducimus voluptate? Reprehenderit corporis voluptas animi adipisci ipsa doloremque consequatur quia illo rem omnis ratione expedita, beatae deleniti, laudantium totam odio! Et perferendis ea veritatis sit eligendi quidem dolore, autem, debitis cumque fuga nostrum id asperiores est! Optio laborum deserunt voluptatem iste rem. Officia nesciunt est mollitia possimus, eaque impedit, magnam ipsa fugiat placeat exercitationem, dolorem molestiae distinctio? Numquam, sunt sed error voluptas excepturi debitis mollitia laudantium repudiandae, ut, quod hic aperiam in nesciunt facilis reprehenderit porro? Illo, nam velit aut veniam neque ut natus consequuntur, id dignissimos in praesentium eveniet tenetur officiis, facere reiciendis eligendi illum est. Consequuntur praesentium quod doloremque veniam. Ad, eveniet natus! Aspernatur eveniet velit rem aut consectetur maiores enim est dolor quos nihil, architecto, corrupti odit repellendus cum, blanditiis totam quaerat deleniti iste dolorem excepturi cumque. Sequi quaerat qui exercitationem ex reiciendis. Perferendis, unde asperiores maiores quas, voluptate iure quae dolorum accusantium eligendi tempora debitis temporibus aut nemo consectetur magnam aliquid necessitatibus. Tempore animi, quia ipsam tenetur cumque, ipsum consectetur dolores, veniam labore iusto consequuntur! Non facere numquam laudantium sint odit sunt quibusdam id eveniet esse sed, quod a ipsum blanditiis libero vero voluptatibus voluptates commodi magni nobis cumque. Aspernatur eveniet velit rem aut consectetur maiores enim est dolor quos nihil, architecto, corrupti odit repellendus cum, blanditiis totam quaerat deleniti iste dolorem excepturi cumque. Sequi quaerat qui exercitationem ex reiciendis. Perferendis, unde asperiores maiores quas, voluptate iure quae dolorum accusantium eligendi tempora debitis temporibus aut nemo consectetur magnam aliquid necessitatibus. Tempore animi, quia ipsam tenetur cumque, ipsum consectetur dolores, veniam labore iusto consequuntur! Non facere numquam laudantium sint odit sunt quibusdam id eveniet esse sed, quod a ipsum blanditiis libero vero voluptatibus voluptates commodi magni nobis cumque.";
     const [readMore, setReadMore] = useState(false);
@@ -103,9 +103,9 @@ const ProductDetail = () => {
                     <div className="section-header">
                         <h2 className="section-header_title">Sizga yoqishi mumkin</h2>
                     </div>
-                    <ul className="products-grid">
+                    <ul className="accounts-grid">
                         {
-                            [1, 2, 3, 4, 5].map(account => <ProductCard key={account} />)
+                            [1, 2, 3, 4, 5].map(account => <AccountCard key={account} />)
                         }
                     </ul>
                 </div>
@@ -114,4 +114,4 @@ const ProductDetail = () => {
     )
 };
 
-export default ProductDetail;
+export default AccountDetail;

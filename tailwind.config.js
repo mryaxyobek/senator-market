@@ -12,12 +12,21 @@ export default {
           green: '#07AE6E',
           gray: '#B1B1B1',
           white: '#ffffff',
-          red: '#C70909'
+          red: '#C70909',
+          blue: '#1b56ff',
         },
+        'card-bg': '#1b234d',
       },
 
-
       // w, h
+      width: {
+        72: '72px'
+      },
+
+      height: {
+        72: '72px'
+      },
+
       maxWidth: {
         1640: '1640px',
       },
@@ -69,16 +78,26 @@ export default {
     },
 
     screens: {
+      // default
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1536px',
+      // other
       1350: '1350px',
       1140: '1140px',
       1100: '1100px',
       950: '950px',
       800: '800px',
       768: '768px',
+      715: '715px',
       650: '650px',
       550: '550px',
       500: '500px',
       470: '470px',
+      400: '400px',
+      350: '350px',
     }
   },
   plugins: [],

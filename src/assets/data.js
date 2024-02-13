@@ -14,7 +14,6 @@ import devAdsRight from './slides/dev-small.jpg';
 
 import logo from './logo.png';
 
-
 const ucData = [
     {
         id: 1,

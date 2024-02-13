@@ -12,7 +12,6 @@ import '../css/swiperStyles.css';
 // import required modules
 import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 import { Link } from 'react-router-dom';
-import { devAds, devAdsRight, topAc, ucService, ytSlide } from '../assets/data';
 
 const Hero = () => {
     return (
@@ -36,23 +35,18 @@ const Hero = () => {
                             className="hero-main-swiper"
                         >
                             <SwiperSlide>
-                                <a target='_blank' href='https://www.youtube.com/@SENATORPUBGM'>
-                                    <img src={ytSlide} alt="sanator market you-tube" />
-                                </a>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <Link to='/uc-service'>
-                                    <img src={ucService} alt="senatro market uc-service" />
+                                <Link to='/'>
+                                    <img src="https://image.api.playstation.com/vulcan/ap/rnd/202312/1402/a7091ca036ce62de86249da1ff0c92e5057416cd639a382e.jpg" alt="" className="" />
                                 </Link>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <a target='_blank' href='https://t.me/shohjahon_asqarov'>
-                                    <img src={devAds} alt="senatro market developer ads" />
-                                </a>
+                                <Link to='/'>
+                                    <img src="https://image.api.playstation.com/vulcan/ap/rnd/202312/1402/a7091ca036ce62de86249da1ff0c92e5057416cd639a382e.jpg" alt="" className="" />
+                                </Link>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <Link to='/accounts'>
-                                    <img src={topAc} alt="senator market top akkauntlar" />
+                                <Link to='/'>
+                                    <img src="https://image.api.playstation.com/vulcan/ap/rnd/202312/1402/a7091ca036ce62de86249da1ff0c92e5057416cd639a382e.jpg" alt="" className="" />
                                 </Link>
                             </SwiperSlide>
                         </Swiper>
@@ -65,19 +59,41 @@ const Hero = () => {
                             autoplay={{
                                 delay: 4000,
                             }}
-                            breakpoints={{
-                                400: {
-                                    slidesPerView: 2,
-                                    spaceBetween: 10,
-                                },
-                                650: {
-                                    slidesPerView: 3,
-                                    spaceBetween: 10,
-                                },
-                                1100: {
-                                    slidesPerView: 1,
-                                    spaceBetween: 20,
-                                }
+                            loop={true}
+                            pagination={{
+                                clickable: true,
+                            }}
+                            modules={[Pagination, Autoplay]}
+                            className="hero-ads_swiper max-1100:hidden"
+                        >
+                            <SwiperSlide>
+                                <Link to='/' className=''>
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Pubg.jpg" alt="" />
+                                </Link>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Link to='/' className=''>
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Pubg.jpg" alt="" />
+                                </Link>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Link to='/' className=''>
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Pubg.jpg" alt="" />
+                                </Link>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Link to='/' className=''>
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Pubg.jpg" alt="" />
+                                </Link>
+                            </SwiperSlide>
+                        </Swiper>
+
+                        {/* max 1100 */}
+                        <Swiper
+                            slidesPerView={3}
+                            spaceBetween={6}
+                            autoplay={{
+                                delay: 4000,
                             }}
                             loop={true}
                             pagination={{
@@ -87,18 +103,62 @@ const Hero = () => {
                             className="hero-ads_swiper"
                         >
                             <SwiperSlide>
-                                <a target='_blank' href='https://t.me/shohjahon_asqarov'>
-                                    <img src={devAdsRight} alt="developer ads" />
-                                </a>
+                                <Link to='/' className=''>
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Pubg.jpg" alt="" />
+                                </Link>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <a target='_blank' href='https://t.me/shohjahon_asqarov'>
-                                    <img src={devAdsRight} alt="developer ads" />
-                                </a>
+                                <Link to='/' className=''>
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Pubg.jpg" alt="" />
+                                </Link>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Link to='/' className=''>
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Pubg.jpg" alt="" />
+                                </Link>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Link to='/' className=''>
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Pubg.jpg" alt="" />
+                                </Link>
                             </SwiperSlide>
                         </Swiper>
 
-
+                        {/* max 470 */}
+                        <Swiper
+                            slidesPerView={1}
+                            spaceBetween={10}
+                            autoplay={{
+                                delay: 4000,
+                            }}
+                            loop={true}
+                            pagination={{
+                                clickable: true,
+                            }}
+                            modules={[Pagination, Autoplay]}
+                            className="hidden max-470:block hero-ads_swiper"
+                        >
+                            <SwiperSlide>
+                                <Link to='/' className=''>
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Pubg.jpg" alt="" />
+                                </Link>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Link to='/' className=''>
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Pubg.jpg" alt="" />
+                                </Link>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Link to='/' className=''>
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Pubg.jpg" alt="" />
+                                </Link>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Link to='/' className=''>
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Pubg.jpg" alt="" />
+                                </Link>
+                            </SwiperSlide>
+                        </Swiper>
                     </div>
 
                 </div>

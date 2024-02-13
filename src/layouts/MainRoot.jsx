@@ -14,6 +14,7 @@ const MainRoot = () => {
         setTimeout(() => {
             setLoader(false);
             document.body.classList.remove('overflow-y-hidden');
+<<<<<<< HEAD
         }, 500);
     }, []);
 
@@ -22,6 +23,11 @@ const MainRoot = () => {
         window.scrollTo(0, 0);
     }, [location]);
 
+=======
+        }, 1000);
+    }, []);
+
+>>>>>>> 7aab2c47190baf1273e335c02575aee9454b4029
 
     const [scrollToTopBtnValue, setScrollToTopBtnValue] = useState(false);
 
@@ -47,7 +53,10 @@ const MainRoot = () => {
         right: 0,
         zIndex: 100
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7aab2c47190baf1273e335c02575aee9454b4029
     return (
         <div className='flex flex-col min-h-screen'>
             {

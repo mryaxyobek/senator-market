@@ -40,7 +40,11 @@ const UcSection = () => {
                         <div className="space-y-3 max-1100:text-center max-650:text-start">
                             <h2 className="text-medium-20 text-primary-green uppercase max-550:text-lg max-500:leading-6">senator uc</h2>
                             <p className="text-bold-38">Sizga UC kerakmi? <br /> Tezkor, ishonchli va arzon uclar faqatgina bizda!</p>
+<<<<<<< HEAD
                             <p className="text-medium-20 text-primary-gray max-550:text-lg max-500:leading-6">Sizga ishonchli UC xizmati kerak bo'lsa unda bizga murojaat qiling. Bizning UC servisimiz 3 yildan ortiqmijozlarga xizmat ko'rsatib kelmoqda. Siz ishoning siz bizning UC servisimizdan foydalanganingizga afsuslanmaysiz. O'ylanmang bizga murojaat qiling.</p>
+=======
+                            <p className="text-medium-20 text-primary-gray max-550:text-lg max-500:leading-6">Sizga ishonchli UC xizmati kerak bo'lsa unda bizga murojaat qiling. Bizning UC servisimiz 3 yildan ortiqDD mijozlarga xizmat ko'rsatib kelmoqda. Siz ishoning siz bizning UC servisimizdan foydalanganingizga afsuslanmaysiz. O'ylanmang bizga murojaat qiling.</p>
+>>>>>>> 7aab2c47190baf1273e335c02575aee9454b4029
                             <Link to='uc-service' className='inline-block btn-default px-11 !mt-6 max-470:flex'>Uc sotib olish</Link>
                         </div>
                     </div>

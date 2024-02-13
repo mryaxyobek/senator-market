@@ -3,8 +3,13 @@ import { Link, NavLink } from 'react-router-dom';
 
 const Footer = () => {
     return (
+<<<<<<< HEAD
         <footer className=''>
             <div className="container py-7 max-650:pb-8">
+=======
+        <footer className=' bg-primary-green/0 pt-10 max-768:pt-8'>
+            <div className="container pb-4 max-650:pb-8">
+>>>>>>> 7aab2c47190baf1273e335c02575aee9454b4029
                 <div className="flex-center-between max-1100:items-start max-650:flex-col gap-6">
                     <Link to='/' title='senator market' aria-label='senator market' className='text-bold-20 uppercase'>SENATOR MARKET</Link>
 
@@ -20,9 +25,13 @@ const Footer = () => {
                                 <NavLink to='/uc-service' className='uppercase'>UC servis</NavLink>
                             </li>
                             <li>
+<<<<<<< HEAD
                                 <a aria-label='developers' target='_blank' href='https://t.me/shohjahon_asqarov' title='developers' className="uppercase">
                                     <span className="uppercase font-medium max-1140:hidden">Dasturchilar</span>
                                 </a>
+=======
+                                <NavLink to='/contact' className='uppercase'>Bog'lanish</NavLink>
+>>>>>>> 7aab2c47190baf1273e335c02575aee9454b4029
                             </li>
                         </ul>
                     </nav>
@@ -76,9 +85,15 @@ const Footer = () => {
             </div>
 
             {/* footer sub content :) */}
+<<<<<<< HEAD
             <div className="py-4 border-t border-primary-green/70">
                 <div className="container text-center text-primary-gray text-regular-16">
                     © 2024. - <span className='uppercase'>Senator market</span>. Barcha huqular himoyalangan
+=======
+            <div className="py-4 border-t border-primary-green">
+                <div className="container text-center text-primary-gray text-regular-16">
+                © 2024. - <span className='uppercase'>Senator market</span>. Barcha huqular himoyalangan
+>>>>>>> 7aab2c47190baf1273e335c02575aee9454b4029
                 </div>
             </div>
         </footer>

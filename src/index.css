@@ -172,7 +172,11 @@
     aspect-ratio: 152/105;
   }
 
+<<<<<<< HEAD
   .account-card_like-btn {
+=======
+  .product-card_like-btn {
+>>>>>>> 7aab2c47190baf1273e335c02575aee9454b4029
     @apply absolute p-1 rounded-md bg-primary-black/50 top-4 right-4 backdrop-filter backdrop-blur-[2px];
   }
 
@@ -338,6 +342,7 @@
 
 
   /* footer */
+<<<<<<< HEAD
   .d {
     border-top: 1px solid #07ae6e;
   }
@@ -346,6 +351,8 @@
     background: rgb(7 174 110 / 0.1);
   }
 
+=======
+>>>>>>> 7aab2c47190baf1273e335c02575aee9454b4029
   .footer_social-networks {
     @apply flex gap-3;
   }
@@ -373,6 +380,7 @@
   .footer_social-networks_item-link svg {
     @apply text-primary-white;
   }
+<<<<<<< HEAD
 
 
 
@@ -384,6 +392,8 @@
   .bg_linear-gradient-black {
     background: linear-gradient(#00000000, #040D12 50%);
   }
+=======
+>>>>>>> 7aab2c47190baf1273e335c02575aee9454b4029
 }
 
 
